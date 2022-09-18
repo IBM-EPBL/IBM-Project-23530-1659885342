@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+</script>
+<title>REGISTRATION FORM</title>
+<link rel="stylesheet" href="stylefile.css">
+</head>
+<body>
+<div class="form-center">
+<form method="post" id="Gridform" action="success.php">
+<h1><center> REGISTRATION FORM</center></h1>
+
+<b><label class="lb">NAME: </label></b>	<input type="text" id="nm" class="inp" name="name" placeholder="Enter your name"><br><br>
+<b><label class="lb">REG NO:</label></b> <input type="text" class="inp" name="regno" placeholder="Enter your registration number"><br><br>
+<b><label class="lb">EMAIL ID: </label></b>	<input type="email" class="inp" name="email" placeholder="Enter your email address"><br><br>
+<b><label class="lb">PASSWORD: </label></b><input type="password" class="inp" name="pwd" placeholder="Enter a password of length 8"><br><br>
+<b><label class="lb">BRANCH: </label></b>	<select class="sel" name="branch"><option>CSE</option>
+<option>ECE</option>
+<option>EEE</option></select><br><br>
+<b><label class="lb">GENDER:</label></b> <br>
+<input type="radio" id="m" name="gen" value="Male">
+  <label for="Male" class="lb">Male</label><br>
+<input type="radio" id="f" name="gen" value="Female">
+  <label for="Female" class="lb">Female</label><br>
+<b><label class="lb">EXPECTATION: </label></b><input type="text-area" class="txt" name="exp" placeholder="What are you expecting from IBM course?"><br><br>
+<center><input type="submit" id="btn"></center>
+</form></div>
+</body>
+</html>
