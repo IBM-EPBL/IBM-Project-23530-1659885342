@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <!--<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='formstyles.css') }}" >  -->
+    <link rel="stylesheet" type="text/css" href= "../static/formstyles.css" >  
+  </head>
+
+  <body>
+    <div class="overallDiv">
+    <h2 class="heading">Student Registration Form</h2>
+    
+    <form action="http://localhost:5000/success" method="post" id="studentform">
+      <div class="form-control">
+        <label for="fname" class="labels">First Name</label><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+      </div>
+  
+      <div class="form-control">
+        <label for="lname" class="labels">Last Name</label><br>
+        <input type="text" id="lname" name="lname" required><br><br>
+      </div>
+
+      <div class="form-control">
+        <label for="dob" class="labels">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" max="2015-01-01" required><br><br>
+      </div>
+
+      <div class="form-control">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+      </div>
+
+      <div class="form-control">
+        <label for="address" class="labels">Residential Address</label></p>
+        <textarea id="address" name="address" rows="5" cols="70" required></textarea><br><br>
+      </div>
+
+      <div class="form-control">
+        <label for="course" class="labels">Course</label><br>
+        <select name="course" id="course" required>
+          <option value="" selected disabled hidden>---Select---</option>
+          <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Communication Engineering">Communication Engineering</option>
+          <option value="Civil Engineering">Civil Engineering</option>
+        </select><br><br>
+      </div>
+  
+      <div class="form-control">
+        <label for="email" class="labels">E-mail</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+      </div>
+
+      <div class="form-control">
+        <label for="password" class="labels">Password</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+      </div>
+
+      <input type="submit" value="Submit">
+    </form> 
+  </div>
+  </body>
+</html>
