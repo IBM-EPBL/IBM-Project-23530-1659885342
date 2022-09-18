@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <div id="Header"><h2>REGISTRATION FORM</h2></div>
+        <form action="http://localhost:5000/success" method="post">
+            <div id="frm">
+            <label for="ele1">Name:</label>
+            <input type="text" name="uname" id="ele1"><br><br>
+
+            <label for="ele2">Email ID:</label>
+            <input type="email" name="uemail" id="ele2"><br><br>
+
+            <label for="ele3">Password:</label>
+            <input type="password" name="upass" id="ele3"><br><br>
+
+            <p>Choose your gender</p>
+            <input type="radio" name="ugender" id="ele41" value="Male">
+            <label for="ele41">Male</label><br>
+            <input type="radio" name="ugender" id="ele42" value="Female">
+            <label for="ele42">Female</label><br>
+            <input type="radio" name="ugender" id="ele43" value="Others">
+            <label for="ele43">Others</label><br><br>
+
+            <label for="ele5">Address:</label>
+            <textarea name="uaddress" id="ele5"></textarea><br><br>
+
+            <label for="ele6">Select your country</label>
+            <select name="ucountry" id="ele7">
+                <option value="India">India</option>
+                <option value="Philippines">Philippines</option>
+                <option value="China">China</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="others">Others</option>
+            </select><br><br>
+
+            <div id="button"><input type="submit" value="Submit"></div>
+            </div>
+        </form>
+    </body>
+</html>
