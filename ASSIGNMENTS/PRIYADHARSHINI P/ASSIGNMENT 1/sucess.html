@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='stylesuccess.css') }}">
+</head>
+<body>
+    <div>
+        <h2>Successfully Registered!</h2></div><br /><br />
+        <table id="data">
+            <tr>
+                <th>Name</th>
+                <th>Register Number</th>
+                <th>Email ID</th>
+                <th>Password</th>
+                <th>Branch</th>
+                <th>Gender</th>
+                <th>Expectation from IBM Course</th>
+            </tr>
+            <tr>
+                {% for f in form_details %}
+                <td>{{ f }}</td>
+                {% endfor %}
+            </tr>
+        </table><br /><br />
+        <button onclick="window.location='RegistrationForm';" id="backtoform">Back to form</button>
+</body>
+</html>
