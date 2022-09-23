@@ -28,7 +28,6 @@ def login():
         account = cursor.fetchone()
         if account:
             session['loggedin'] = True
-            session['id'] = account['Id']
             session['username'] = account['Username']
             msg = 'Logged in successfully !'
             return render_template('homepage.html', msg = msg)
@@ -39,7 +38,6 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('loggedin', None)
-    session.pop('id', None)
     session.pop('username', None)
     return redirect(url_for('login'))
  
@@ -50,6 +48,7 @@ def register():
         username = request.form['username']
         password = request.form['password']
         email = request.form['email']
+        regno=request.form['regno']
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('SELECT * FROM UserDetails WHERE Username = % s', (username, ))
         account = cursor.fetchone()
@@ -62,7 +61,7 @@ def register():
         elif not username or not password or not email:
             msg = 'Please fill out the form !'
         else:
-            cursor.execute('INSERT INTO UserDetails VALUES ( % s, % s, % s, NULL)', (username,email, password, ))
+            cursor.execute('INSERT INTO UserDetails VALUES ( % s, % s, % s, %s)', (username,email, password, regno))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
     elif request.method == 'POST':
