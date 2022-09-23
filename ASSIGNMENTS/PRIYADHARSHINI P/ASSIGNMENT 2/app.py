@@ -61,7 +61,7 @@ def register():
         elif not username or not password or not email:
             msg = 'Please fill out the form !'
         else:
-            cursor.execute('INSERT INTO UserDetails VALUES ( % s, % s, % s, %s)', (username,email, password, regno))
+            cursor.execute('INSERT INTO UserDetails VALUES ( % s, % s, % s, % s)', (username,email, password, regno))
             mysql.connection.commit()
             msg = 'You have successfully registered !'
     elif request.method == 'POST':
