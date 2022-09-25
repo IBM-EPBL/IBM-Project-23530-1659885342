@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href= "../static/styles.css" >  
+    <script>
+      function loadRegisterPage() {
+          window.location.assign("http://localhost:5000/");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="overallDiv">
+    <h2 class="heading">Login</h2>
+
+    {% for message in get_flashed_messages() %}
+      <div class="message-flash">
+        <strong>{{message}}</strong> 
+      </div>
+    {% endfor %}
+
+    <form action="http://localhost:5000/login" method="post" id="studentform">
+
+      <div class="form-control">
+        <label for="username" class="labels">Username</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+      </div>
+
+      <div class="form-control">
+        <label for="password" class="labels">Password</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+      </div>
+
+      <input type="submit" value="Sign In!">
+      <button type="button" onclick="loadRegisterPage();" id="registerbutton">Sign Up!</button>
+    </form> 
+  </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href= "../static/styles.css" >  
+    <script>
+      function loadLoginPage() {
+          window.location.assign("http://localhost:5000/logout");
+      }
+    </script> 
+  </head>
+  <body>
+    <div class="overallDiv">
+    <h2>Welcome, {{session.username}}!</h2>
+    <button type="button" onclick="loadLoginPage();" id="logoutbutton">Logout</button>
+    </div>
+  </body>
+</html>
