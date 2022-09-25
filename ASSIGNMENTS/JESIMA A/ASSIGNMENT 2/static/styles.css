@@ -1,0 +1,62 @@
+body {
+    background-color: #201a55;
+    font-family:'Tahoma';
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    color: #201a55;
+}
+form{
+    max-width: 2000px;
+    padding-top:50px;
+    font-size: 20px;
+    text-align: center;  
+}
+.form-control{
+    margin-bottom: 5px;
+    text-align: left;
+}
+.overallDiv{
+    background-color: #ffffff;
+    border: 5px solid #000;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    padding-left:50px;
+    padding-right:50px;
+}
+input[type=text], input[type=password], input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+input[type=submit], #registerbutton, #loginbutton, #logoutbutton{
+    background-color: #201a55;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    width: 40%;
+    font-size: 20px;
+    font-weight:bold;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.labels{
+    font-weight:bold;
+    color: #201a55;
+}
+.message-flash{
+    color: #31708F;
+    background-color: #D9EDF7; 
+    border-color: #d6e9c6;
+    padding: 15px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
