@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register Page</title>
+        <link rel="stylesheet" href="../static/styles.css">
+        <script>
+            function loadLoginPage(){
+                window.location.assign("http://localhost:5000/login");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="Header"><h2>REGISTRATION PORTAL</h2></div>
+        <form action="http://localhost:5000/" method="post">
+            <div id="frm">
+            <label for="ele1">Email ID:</label>
+            <input type="email" name="uemail" id="ele1"><br><br>
+
+            <label for="ele2">User Name:</label>
+            <input type="text" name="uname" id="ele2"><br><br>
+
+            <label for="ele3">Password:</label>
+            <input type="password" name="upass" id="ele3"><br><br>
+
+            <label for="ele4">Roll Number:</label>
+            <input type="text" name="urollno" id="ele4"><br><br>
+
+            <div id="button"><input type="submit" value="Submit"></div>
+            <button type="button" onclick="loadLoginPage();">LOGIN</button>
+            </div>
+        </form>
+    </body>
+</html>
