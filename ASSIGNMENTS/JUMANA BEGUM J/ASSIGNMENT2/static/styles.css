@@ -1,0 +1,23 @@
+html{
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(to bottom, #a66eeb 0%, #35193b 100%);
+}
+#frm{
+    background:rgba(230, 19, 230, 0.24);
+    color:black;
+    max-width: 25%;
+    margin: auto;
+    padding: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:black;
+}
+#Header{
+    text-align: center;
+}
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
