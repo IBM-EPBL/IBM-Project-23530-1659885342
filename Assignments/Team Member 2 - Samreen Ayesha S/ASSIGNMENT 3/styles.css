@@ -1,0 +1,25 @@
+img {
+	border-bottom-width: 1px;
+	border: solid;	
+	opacity: 80%;
+}
+img:hover {
+	border-bottom-width: 1px;
+	border: solid;
+	opacity: 100%;
+}
+h1 {
+	color: gold;
+	font-family: serif;
+	font-size: 50px;
+}
+body {
+	background-color: #800000;
+	text-align: center;
+}
+#center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
