@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(92, 164, 236);
+}
+#images{
+    margin-left : 10px;
+    margin-right : 10px;
+    margin-bottom : 10px;
+    margin : auto;
+    width : 70%;
+}
+#maindiv{
+    margin : auto;
+    width : 34%;
+}
+#main{
+    border-radius: 50%;
+    width : 300px;
+    height : 300px;
+}
+#sub{
+    width : 200px;
+    height : 200px;
+    margin-right : 10px;
+}
+h1{
+    text-align: center;
+    font-family: Courier;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom : 10px;
+    color: aliceblue;
+}
