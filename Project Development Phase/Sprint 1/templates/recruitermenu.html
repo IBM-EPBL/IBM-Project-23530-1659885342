@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title>Recruiter Menu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.ico">
+
+        <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../static/assets/css/flaticon.css">
+        <link rel="stylesheet" href="../static/assets/css/price_rangs.css">
+        <link rel="stylesheet" href="../static/assets/css/slicknav.css">
+        <link rel="stylesheet" href="../static/assets/css/animate.min.css">
+        <link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="../static/assets/css/slick.css">
+        <link rel="stylesheet" href="../static/assets/css/nice-select.css">
+        <link rel="stylesheet" href="../static/assets/css/style.css">
+        <link rel="stylesheet" href="../static/styles.css">
+    </head>
+    <body>
+    <div class="our-services section-pad-t30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-tittle text-center">
+                        <h2>Welcome!</h2>
+                        {% for message in get_flashed_messages() %}
+                        <div style="color: #31708F; background-color: #D9EDF7; border-color: #d6e9c6; padding: 15px; margin-top: 20px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 4px;">
+                            <strong>{{message}}</strong> 
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row d-flex justify-content-center" >
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-tour"></span>
+                            </div>
+                            <div class="services-cap">
+                               <h5><a href="/postjob">Post Job</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Yet to do-->
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-cms"></span>
+                            </div>
+                            <div class="services-cap">
+                               <h5><a href="/viewappln">View Applicants</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-app"></span>
+                            </div>
+                            <div class="services-cap">
+                               <h5><a href="/logout">Logout</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </body>

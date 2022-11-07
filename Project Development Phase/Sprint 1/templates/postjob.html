@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Post Job</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.png">
+		
+	<!-- CSS here -->
+		<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../static/assets/css/slicknav.css">
+		<link rel="stylesheet" href="../static/assets/css/price_rangs.css">
+		<link rel="stylesheet" href="../static/assets/css/animate.min.css">
+		<link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+		<link rel="stylesheet" href="../static/assets/css/slick.css">
+		<link rel="stylesheet" href="../static/assets/css/nice-select.css">
+		<link rel="stylesheet" href="../static/assets/css/style.css">
+		<link rel="stylesheet" href="../static/assets/css/responsive.css">
+		
+        <script type="text/javascript">
+        
+        // Function to Disable all Past Dates for Application Submission Deadline Input
+        function setMinDate(){
+            var dtToday = new Date();
+    
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+            var maxDate = dtToday.toISOString().substr(0, 10);
+            $('#deadline').attr('min', maxDate);
+        };
+        window.onload = setMinDate;
+        </script>
+</head>
+
+<body>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparrent">
+            <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row justify-content-end">         
+                        <!-- Header-btn -->
+                        <div class="header-btn d-none f-right d-lg-block">   
+                            <a href="/recruitermenu" class="btn head-btn1">Menu</a>   
+                            <a href="/logout" class="btn head-btn1">Logout</a>                                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header> 
+
+	<!-- FORM START -->
+	<div class="whole-wrap">
+		<div class="container box_1170">
+			<div class="section-top-border">
+				<div class="row" style="border:solid #050581; padding:2%">
+					<div class="col-lg-8 col-md-8">
+						<h3 class="mb-30"  style="color: #050581; font-size:xx-large;">POST JOB</h3>
+						<form action="/postjob" method="post" enctype="multipart/form-data">
+                            
+                            <label for="role" class="labels">Job Title</label><br>
+                            <input type="text" id="role" name="role"  required><br><br>
+                    
+                            <label for="domain" class="labels">Industry Domain</label><br>
+                            <select name="domain" id="domain" required>
+                                <option value="" selected disabled hidden>---Select---</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Hospitality">Hospitality</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Education">Education</option>
+                                <option value="Creative Arts">Creative Arts</option>
+                                <option value="Media">Media</option>
+                                <option value="Law">Law</option>
+                                <option value="Environment & Agriculture">Environment & Agriculture</option>
+                                <option value="Construction">Construction</option>
+                            </select><br><br><br>
+                
+                            <label for="location" class="labels">Location</label><br>
+                            <input type="text" id="location" name="location" required><br><br>
+                
+                            <label for="jobtype" class="labels">Job Type</label><br>
+                
+                            <input type="radio" id="parttime" name="jobtype" value="Part Time" required>
+                            <label for="parttime">Part Time</label>
+                            <input type="radio" id="fulltime" name="jobtype" value="Full Time" required>
+                            <label for="fulltime">Full Time</label><br><br>
+                
+                            <label for="jobdes" class="labels">Job Description</label><br>
+                            <textarea id="jobdes" name="jobdes" rows="5" cols="70" required></textarea><br><br>
+                
+                            <label for="skills" class="labels">Key Skills Required</label>
+                            <textarea id="skills" name="skills" rows="5" cols="70" required></textarea><br><br>
+                    
+                            <label for="education" class="labels">Educational Qualifications Required</label>
+                            <textarea id="education" name="education" rows="5" cols="70" required></textarea><br><br>
+                
+                            <label for="experience" class="labels">Work Experience Required (years)</label><br>
+                            <input type="text" id="experience" name="experience" required><br><br>
+                    
+                            <label for="salary" class="labels">Salary Range(PA)</label><br>
+                            <input type="text" id="salary" name="salary" class="ans" required><br><br>
+                      
+                            <label for="benefits" class="labels">Benefits and Perks</label>
+                            <textarea id="benefits" name="benefits" rows="5" cols="70" required></textarea><br><br>
+                      
+                            <label for="logo" class="labels">Organisation Image</label><br>
+                            <input type="file" id="logo" name="logo" accept="image/*" ><br><br>
+                      
+                            <label for="deadline" class="labels">Application Submission Deadline</label><br>
+                            <input type="date" id="deadline" name="deadline"><br><br>
+
+                            <label for="vacancies">Number of Job Openings</label><br>
+                            <input type="number" id="vacancies" name="vacancies" min="1"><br><br>
+							
+							<input type="submit" class="genric-btn primary radius" value="Submit">
+							<input type="reset" class="genric-btn primary radius">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>			
+	   <!-- FORM END -->
+	
+<!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../static/assets/js/popper.min.js"></script>
+        <script src="../static/assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="../static/assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="../static/assets/js/owl.carousel.min.js"></script>
+		<script src="../static/assets/js/slick.min.js"></script>
+		<script src="../static/assets/js/price_rangs.js"></script>
+		
+		<!-- One Page, Animated-HeadLin -->
+        <script src="../static/assets/js/wow.min.js"></script>
+		<script src="../static/assets/js/animated.headline.js"></script>
+		<script src="../static/assets/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="../static/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../static/assets/js/jquery.nice-select.min.js"></script>
+		<script src="../static/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="../static/assets/js/contact.js"></script>
+        <script src="../static/assets/js/jquery.form.js"></script>
+        <script src="../static/assets/js/jquery.validate.min.js"></script>
+        <script src="../static/assets/js/mail-script.js"></script>
+        <script src="../static/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="../static/assets/js/plugins.js"></script>
+        <script src="../static/assets/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+</body>
+</html>

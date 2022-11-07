@@ -1,0 +1,74 @@
+<!doctype html>
+<html  lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Seeker Login</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.png">
+	
+	<!-- CSS here -->
+		<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../static/assets/css/slicknav.css">
+		<link rel="stylesheet" href="../static/assets/css/price_rangs.css">
+		<link rel="stylesheet" href="../static/assets/css/animate.min.css">
+		<link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+		<link rel="stylesheet" href="../static/assets/css/slick.css">
+		<link rel="stylesheet" href="../static/assets/css/nice-select.css">
+		<link rel="stylesheet" href="../static/assets/css/style.css">
+		<link rel="stylesheet" href="../static/assets/css/responsive.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../static/styles.css">
+        
+        <script>
+            function loadHomePage(){
+                window.location.assign("/");
+            }
+        </script>
+</head>
+<body>
+    <center>
+        <div class="wrapper">
+            <div class="Header"><h2>LOGIN</h2></div>
+            <br>
+            <div class="frm">
+                <form action="/login_seeker" method="post">
+                    <label for="ele2" class="label">Email ID:</label>
+                    <input type="email" name="lemail" id="ele2" class="ans" required><br><br>
+    
+                    <label for="ele3" class="label">Password:</label>
+                    <input type="password" name="lpass" id="password" class="ans" required/>
+                    <i class="bi bi-eye-slash" id="togglePassword"></i><br><br>
+    
+                    <center>
+                        <div class="container box_1170 border-top-generic">
+                            <div class="button-group-area mt-40">
+                                <input type="submit" value="Submit" class="genric-btn primary radius">
+                                <button type="button" onclick="loadHomePage();" class="genric-btn primary-border radius">BACK TO HOME</button>
+                            </div>
+                        </div>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye / eye slash icon
+        this.classList.toggle('bi-eye');
+    });
+</script>
+</html>
