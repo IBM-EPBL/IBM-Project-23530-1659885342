@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Apply Jobs</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="../static/assets/img/favicon.png">
+		
+	<!-- CSS here -->
+		<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../static/assets/css/slicknav.css">
+		<link rel="stylesheet" href="../static/assets/css/price_rangs.css">
+		<link rel="stylesheet" href="../static/assets/css/animate.min.css">
+		<link rel="stylesheet" href="../static/assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../static/assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="../static/assets/css/themify-icons.css">
+		<link rel="stylesheet" href="../static/assets/css/slick.css">
+		<link rel="stylesheet" href="../static/assets/css/nice-select.css">
+		<link rel="stylesheet" href="../static/assets/css/style.css">
+		<link rel="stylesheet" href="../static/assets/css/responsive.css">
+		<script type="text/javascript">
+            function FillAddressInput()
+                {
+                   if (document.getElementById('chkid').checked == true){
+                    document.getElementById("curAL1id").value = document.getElementById("pAL1id").value;
+                    document.getElementById("curAL2id").value = document.getElementById("pAL2id").value;
+                    document.getElementById("curzipid").value = document.getElementById("pzipid").value;
+                    document.getElementById("curcityid").value = document.getElementById("pcityid").value;
+                    document.getElementById("curstateid").value = document.getElementById("pstateid").value;
+                    document.getElementById("curcntryid").value = document.getElementById("pcntryid").value;
+                    }
+                    else{
+                    document.getElementById("curAL1id").value = "";
+                    document.getElementById("curAL2id").value = "";
+                    document.getElementById("curzipid").value = "";
+                    document.getElementById("curcityid").value = "";
+                    document.getElementById("curstateid").value = "";
+                    document.getElementById("curcntryid").value = "";
+                    }
+                }
+            
+        </script>
+</head>
+
+<body>
+	
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="../static/assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparrent">
+            <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row justify-content-end">         
+                        <!-- Header-btn -->
+                        <div class="header-btn d-none f-right d-lg-block">   
+                            <a href="/logout" class="btn head-btn1">Logout</a>                                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+	   <!-- FORM START -->
+	   <div class="whole-wrap">
+		<div class="container box_1170">
+			<div class="section-top-border">
+				<div class="row" style="border:solid #FF3351; padding:2%">
+					<div class="col-lg-8 col-md-8">
+						<h3 class="mb-30"  style="color: #FF3351; font-size:xx-large;">APPLICATION FORM</h3>
+						<form action="/JobApplicationSubmit" method="post" autocomplete="on" enctype="multipart/form-data">
+							<input type="hidden" name="jobidname" value="{{ jobid }}">
+							<fieldset>
+							<legend>PERSONAL DETAILS</legend><br>
+							<label for="fnameid">First Name:</label>
+							<input type="text" name="ufname" id="fnameid" pattern="[a-zA-Z]{1,32}" required><br><br>
+							
+							<label for="lnameid">Last Name:</label>
+							<input type="text" name="ulname" id="lnameid" pattern="[a-zA-Z]{1,32}" required><br><br>
+							
+							<label for="emailid">Email (Enter same as account email id):</label>
+							<input type="email" name="uemail" id="emailid" required><br><br>
+
+							<label for="phoneid">Phone number:</label>
+							<input type="tel" name="uphone" id="phoneid" placeholder="+91 xxxxxxxxxx" pattern="+91 [0-9]{10}" required><br><br>
+
+							<label for="dobid">Date of Birth:</label>
+							<input type="date" name="udob" id="dobid" required><br><br>
+
+							<p>Gender:</p>
+							<input type="radio" name="ugender" id="maleid" value="Male">
+							<label for="maleid">Male</label>
+							<input type="radio" name="ugender" id="femaleid" value="Female">
+							<label for="femaleid">Female</label>
+							<input type="radio" name="ugender" id="othersid" value="Others">
+							<label for="othersid">Others</label><br><br>
+
+							<label for="pobid">Country of Birth:</label>
+							<input type="text" name="upob" id="pobid" required><br><br>
+
+							<label for="citiid">Nationality:</label>
+							<input type="text" name="uciti" id="citiid" required><br><br>
+							</fieldset><br>
+
+							<fieldset>
+								<legend>PERMANENT ADDRESS</legend><br>
+								<p>Enter permanent address as in govt. ID proof</p>
+								<label for="pAL1id">Address Line 1:</label>
+								<input type="text" id="pAL1id" name="pAL1" required><br><br>
+								<label for="pAL2id">Address Line 2:</label>
+								<input type="text" id="pAL2id" name="pAL2"><br><br>
+								<label for="pzipid">Zip code:</label>
+								<input type="number" name="pzip" id="pzipid" pattern="[0-9]{6}" required><br><br>
+								<label for="pcityid">City:</label>
+								<input type="text" id="pcityid" name="pcity" required><br><br>
+								<label for="pstateid">State:</label>
+								<input type="text" id="pstateid" name="pstate" required><br><br>
+								<label for="pcntryid">Country:</label>
+								<input type="text" id="pcntryid" name="pcntry" required><br><br>
+							</fieldset><br>
+
+							<fieldset>
+								<legend>CURRENT ADDRESS</legend><br>
+								<input type="checkbox" id="chkid" name="chk" value="copy" onclick="FillAddressInput()">
+								<label for="chkid">Same as permanent address</label><br><br>
+								<label for="curAL1id">Address Line 1:</label>
+								<input type="text" id="curAL1id" name="curAL1" required><br><br>
+								<label for="curAL2id">Address Line 2:</label>
+								<input type="text" id="curAL2id" name="curAL2" required><br><br>
+								<label for="curzipid">Zip code:</label>
+								<input type="text" name="curzip" id="curzipid" pattern="[0-9]{6}" required><br><br>
+								<label for="curcityid">City:</label>
+								<input type="text" id="curcityid" name="curcity" required><br><br>
+								<label for="curstateid">State:</label>
+								<input type="text" id="curstateid" name="curstate" required><br><br>
+								<label for="curcntryid">Country:</label>
+								<input type="text" id="curcntryid" name="curcntry" required><br><br>
+							</fieldset><br>
+
+							<fieldset>
+								<legend>QUALIFICATIONS</legend><br>
+								<table>
+									<tr>
+									<td align="center"><b>Sl.No.</b></td>
+									<td align="center"><b>Degree</b></td>
+									<td align="center"><b>Board</b></td>
+									<td align="center"><b>Percentage</b></td>
+									<td align="center"><b>Year of Passing</b></td>
+									</tr>
+									
+									<tr>
+									<td>1</td>
+									<td>Class X</td>
+									<td><input type="text" name="Xboard"></td>
+									<td><input type="text" name="XPercent"></td>
+									<td><input type="text" name="XYOP"></td>
+									</tr>
+									
+									<tr>
+									<td>2</td>
+									<td>Class XII</td>
+									<td><input type="text" name="XIIboard"></td>
+									<td><input type="text" name="XIIPercent"></td>
+									<td><input type="text" name="XIIYOP"></td>
+									</tr>
+									
+									<tr>
+									<td>3</td>
+									<td>Graduation</td>
+									<td><input type="text" disabled></td>
+									<td><input type="text" name="GradPercent"></td>
+									<td><input type="text" name="GradYOP"></td>
+									</tr>
+									
+									<tr>
+									<td>4</td>
+									<td>Masters</td>
+									<td><input type="text" disabled></td>
+									<td><input type="text" name="MastersPercent"></td>
+									<td><input type="text" name="MastersYOP"></td>
+									</tr>
+									
+									<tr>
+									<td></td>
+									</tr>
+									</table>
+							</fieldset><br>
+
+							<label for="workid">Work Experience (in years):</label>
+							<input type="number" id="workid" name="work" min="0" max="100" required><br><br>
+							
+							<label for="resumeid">Upload Your Resume</label>
+							<input type="file" id="resumeid" name="uresume" accept=".pdf" required><br><br>
+							
+							
+							<input type="submit" class="genric-btn danger-border circle" value="Submit">
+							<input type="reset" class="genric-btn danger-border circle">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>			
+	   <!-- FORM END -->
+
+	<footer>
+		<!-- Footer Start-->
+		<div class="footer-area footer-bg footer-padding">
+			<div class="container">
+				<div class="row d-flex justify-content-between">
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+					   <div class="single-footer-caption mb-50">
+						 <div class="single-footer-caption mb-30">
+							 <div class="footer-tittle">
+								 <h4>About Us</h4>
+								 <div class="footer-pera">
+									 <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+								</div>
+							 </div>
+						 </div>
+  
+					   </div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+						<div class="single-footer-caption mb-50">
+							<div class="footer-tittle">
+								<h4>Contact Info</h4>
+								<ul>
+									<li>
+									<p>Address :Your address goes
+										here, your demo address.</p>
+									</li>
+									<li><a href="#">Phone : +8880 44338899</a></li>
+									<li><a href="#">Email : info@colorlib.com</a></li>
+								</ul>
+							</div>
+  
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+						<div class="single-footer-caption mb-50">
+							<div class="footer-tittle">
+								<h4>Important Link</h4>
+								<ul>
+									<li><a href="#"> View Project</a></li>
+									<li><a href="#">Contact Us</a></li>
+									<li><a href="#">Testimonial</a></li>
+									<li><a href="#">Proparties</a></li>
+									<li><a href="#">Support</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+						<div class="single-footer-caption mb-50">
+							<div class="footer-tittle">
+								<h4>Newsletter</h4>
+								<div class="footer-pera footer-pera2">
+								 <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+							 </div>
+							 <!-- Form -->
+							 <div class="footer-form" >
+								 <div id="mc_embed_signup">
+									 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+									 method="get" class="subscribe_form relative mail_part">
+										 <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+										 class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+										 onblur="this.placeholder = ' Email Address '">
+										 <div class="form-icon">
+											 <button type="submit" name="submit" id="newsletter-submit"
+											 class="email_icon newsletter-submit button-contactForm"><img src="../static/assets/img/icon/form.png" alt=""></button>
+										 </div>
+										 <div class="mt-10 info"></div>
+									 </form>
+								 </div>
+							 </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			   <!--  -->
+			   <div class="row footer-wejed justify-content-between">
+					   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+						  <!-- logo -->
+						  <div class="footer-logo mb-20">
+							<a href="index.html"><img src="../static/assets/img/logo/logo2_footer.png" alt=""></a>
+						  </div>
+					   </div>
+					   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+						<div class="footer-tittle-bottom">
+							<span>5000+</span>
+							<p>Talented Hunter</p>
+						</div>
+					   </div>
+					   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+							<div class="footer-tittle-bottom">
+								<span>451</span>
+								<p>Talented Hunter</p>
+							</div>
+					   </div>
+					   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+							<!-- Footer Bottom Tittle -->
+							<div class="footer-tittle-bottom">
+								<span>568</span>
+								<p>Talented Hunter</p>
+							</div>
+					   </div>
+			   </div>
+			</div>
+		</div>
+		<!-- footer-bottom area -->
+		<div class="footer-bottom-area footer-bg">
+			<div class="container">
+				<div class="footer-border">
+					 <div class="row d-flex justify-content-between align-items-center">
+						 <div class="col-xl-10 col-lg-10 ">
+							 <div class="footer-copy-right">
+								 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							 </div>
+						 </div>
+						 <div class="col-xl-2 col-lg-2">
+							 <div class="footer-social f-right">
+								 <a href="#"><i class="fab fa-facebook-f"></i></a>
+								 <a href="#"><i class="fab fa-twitter"></i></a>
+								 <a href="#"><i class="fas fa-globe"></i></a>
+								 <a href="#"><i class="fab fa-behance"></i></a>
+							 </div>
+						 </div>
+					 </div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End-->
+	</footer>
+	
+<!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="../static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../static/assets/js/popper.min.js"></script>
+        <script src="../static/assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="../static/assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="../static/assets/js/owl.carousel.min.js"></script>
+		<script src="../static/assets/js/slick.min.js"></script>
+		<script src="../static/assets/js/price_rangs.js"></script>
+		
+		<!-- One Page, Animated-HeadLin -->
+        <script src="../static/assets/js/wow.min.js"></script>
+		<script src="../static/assets/js/animated.headline.js"></script>
+		<script src="../static/assets/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="../static/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../static/assets/js/jquery.nice-select.min.js"></script>
+		<script src="../static/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="../static/assets/js/contact.js"></script>
+        <script src="../static/assets/js/jquery.form.js"></script>
+        <script src="../static/assets/js/jquery.validate.min.js"></script>
+        <script src="../static/assets/js/mail-script.js"></script>
+        <script src="../static/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="../static/assets/js/plugins.js"></script>
+        <script src="../static/assets/js/main.js"></script>
+        
+</body>
+</html>
