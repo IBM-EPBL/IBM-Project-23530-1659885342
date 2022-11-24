@@ -24,11 +24,11 @@ mail = Mail(app) # instantiate the mail class
 # configuration of mail
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'sjrjobhunt@gmail.com'
-app.config['MAIL_PASSWORD'] = 'raashgiyqmiwleey'
+app.config['MAIL_USERNAME'] = 'add-your-mail-here'
+app.config['MAIL_PASSWORD'] = 'add-your-app-password-here'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_DEFAULT_SENDER'] = 'sjrjobhunt@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'add-your-default-sender-here'
 mail = Mail(app)
 
 oauth = OAuth(app)
@@ -147,8 +147,8 @@ def linkedin_login(sr):
 
 @app.route('/google')
 def google():
-    GOOGLE_CLIENT_ID = '367786402665-skc738qj1tacaf0kkrkcgolap5775qia.apps.googleusercontent.com'
-    GOOGLE_CLIENT_SECRET = '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'
+    GOOGLE_CLIENT_ID = 'add-your-client-id-here'
+    GOOGLE_CLIENT_SECRET = 'add-your-client-secret-here'
      
     CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
     oauth.register(
@@ -184,8 +184,8 @@ def google_auth():
 
 @app.route('/googlesignin/<string:sr>', methods=['GET','POST'])
 def googlesignin(sr):
-    GOOGLE_CLIENT_ID = '367786402665-skc738qj1tacaf0kkrkcgolap5775qia.apps.googleusercontent.com'
-    GOOGLE_CLIENT_SECRET = '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'
+    GOOGLE_CLIENT_ID = 'add-your-client-id-here'
+    GOOGLE_CLIENT_SECRET = 'add-your-client-secret-here'
      
     CONF_URL = 'https://accounts.google.com/.well-known/openid-configuration'
     oauth.register(
