@@ -203,6 +203,7 @@ def googlesignin(sr):
 
 @app.route('/google/authsignin/<string:sr>')
 def google_authsignin(sr):
+    global webhook_return
     token = oauth.google.authorize_access_token()
     user = oauth.google.parse_id_token(token,None)
     print(" Google User ", user)
@@ -285,6 +286,7 @@ def complete_profile():
 
 @app.route("/addresume", methods=['POST'])
 def addresume():
+    global webhook_return
     if request.method=="POST":
         conn=connect.connection()
         uploaded_file = request.files['seekerresume']
