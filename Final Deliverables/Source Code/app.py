@@ -593,7 +593,7 @@ def loadApplForm():
     if request.method=="POST":
         jobid=request.form["Applbutton"]
         print(jobid)
-        return render_template('JobApplication.html',jobid=jobid)
+        return render_template('jobApplication.html',jobid=jobid)
     else:
         return render_template("sample.html")
 
